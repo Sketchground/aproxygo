@@ -1,0 +1,15 @@
+[Unit]
+Description=aproxy go reverse proxy
+
+[Service]
+User=www-data
+Group=www-data
+
+WorkingDirectory=/var/www
+
+Restart=on-failure
+
+ExecStart=/usr/local/bin/aproxygo
+
+[Install]
+WantedBy=multi-user.target
